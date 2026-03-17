@@ -27,7 +27,7 @@ class ServerCommand extends Command
     /**
      * @inheritDoc
      */
-    public static function defaultName()
+    public static function defaultName(): string
     {
         return 'synapse server';
     }
@@ -35,7 +35,7 @@ class ServerCommand extends Command
     /**
      * @inheritDoc
      */
-    public static function getDescription()
+    public static function getDescription(): string
     {
         return 'Start the MCP (Model Context Protocol) server';
     }
@@ -94,7 +94,7 @@ class ServerCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int Exit code
      */
-    public function execute(Arguments $args, ConsoleIo $io)
+    public function execute(Arguments $args, ConsoleIo $io): int
     {
         // If --inspect flag is present, launch inspector
         if ($args->getOption('inspect')) {
@@ -186,7 +186,7 @@ class ServerCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int Exit code
      */
-    private function launchInspector(ConsoleIo $io)
+    private function launchInspector(ConsoleIo $io): int
     {
         $io->out('<info>Launching MCP Inspector...</info>');
         $io->out('');

@@ -87,7 +87,7 @@ class IndexDocsCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int|null Exit code
      */
-    public function execute(Arguments $args, ConsoleIo $io)
+    public function execute(Arguments $args, ConsoleIo $io): ?int
     {
         $service = new DocumentSearchService();
         $destroy = (bool)$args->getOption('destroy');
@@ -177,7 +177,7 @@ class IndexDocsCommand extends Command
      * @param \Synapse\Documentation\DocumentSearchService $service Search service
      * @param \Cake\Console\ConsoleIo $io Console I/O
      */
-    private function displayStatistics(DocumentSearchService $service, ConsoleIo $io)
+    private function displayStatistics(DocumentSearchService $service, ConsoleIo $io): void
     {
         $io->out('<info>Index Statistics</info>');
 
@@ -203,7 +203,7 @@ class IndexDocsCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int Exit code
      */
-    private function handleDestroy(DocumentSearchService $service, Arguments $args, ConsoleIo $io)
+    private function handleDestroy(DocumentSearchService $service, Arguments $args, ConsoleIo $io): int
     {
         $io->out('<warning>Destroy Search Index</warning>');
         $io->hr();
