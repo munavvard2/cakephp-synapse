@@ -39,7 +39,7 @@ class TinkerEvalCommand extends Command
     /**
      * @inheritDoc
      */
-    protected function buildOptionParser(ConsoleOptionParser $parser)
+    protected function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
     {
         $parser
             ->setDescription(

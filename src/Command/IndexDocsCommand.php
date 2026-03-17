@@ -38,7 +38,7 @@ class IndexDocsCommand extends Command
      *
      * @param \Cake\Console\ConsoleOptionParser $parser Option parser
      */
-    protected function buildOptionParser(ConsoleOptionParser $parser)
+    protected function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
     {
         $parser
             ->setDescription('Index documentation for full-text search')

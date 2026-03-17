@@ -40,7 +40,7 @@ class SearchDocsCommand extends Command
      *
      * @param \Cake\Console\ConsoleOptionParser $parser Option parser
      */
-    protected function buildOptionParser(ConsoleOptionParser $parser)
+    protected function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
     {
         $parser
             ->setDescription('Search CakePHP documentation')
