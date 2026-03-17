@@ -23,7 +23,7 @@ class TinkerEvalCommand extends Command
     /**
      * @inheritDoc
      */
-    public static function defaultName(): string
+    public static function defaultName()
     {
         return 'synapse tinker_eval';
     }
@@ -31,7 +31,7 @@ class TinkerEvalCommand extends Command
     /**
      * @inheritDoc
      */
-    public static function getDescription(): string
+    public static function getDescription()
     {
         return 'Execute PHP code in a fresh CakePHP application context (internal)';
     }
@@ -39,7 +39,7 @@ class TinkerEvalCommand extends Command
     /**
      * @inheritDoc
      */
-    protected function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
+    protected function buildOptionParser(ConsoleOptionParser $parser)
     {
         $parser
             ->setDescription(
@@ -65,7 +65,7 @@ class TinkerEvalCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int Exit code
      */
-    public function execute(Arguments $args, ConsoleIo $io): int
+    public function execute(Arguments $args, ConsoleIo $io)
     {
         // phpcs:disable Squiz.PHP.Eval.Discouraged
 

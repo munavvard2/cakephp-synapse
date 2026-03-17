@@ -40,7 +40,7 @@ class SearchDocsCommand extends Command
      *
      * @param \Cake\Console\ConsoleOptionParser $parser Option parser
      */
-    protected function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
+    protected function buildOptionParser(ConsoleOptionParser $parser)
     {
         $parser
             ->setDescription('Search CakePHP documentation')
@@ -97,7 +97,7 @@ class SearchDocsCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int|null Exit code
      */
-    public function execute(Arguments $args, ConsoleIo $io): ?int
+    public function execute(Arguments $args, ConsoleIo $io)
     {
         $query = $args->getArgument('query');
         if (!is_string($query) || trim($query) === '') {
@@ -188,7 +188,7 @@ class SearchDocsCommand extends Command
      * @param bool $noSnippet Hide snippets
      * @param \Cake\Console\ConsoleIo $io Console I/O
      */
-    private function displayResults(array $results, bool $noSnippet, ConsoleIo $io): void
+    private function displayResults(array $results, bool $noSnippet, ConsoleIo $io)
     {
         // Prepare table data with headers as first row
         $tableData = [];
@@ -254,7 +254,7 @@ class SearchDocsCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int Exit code
      */
-    private function interactiveMode(array $results, ConsoleIo $io): int
+    private function interactiveMode(array $results, ConsoleIo $io)
     {
         $io->out('');
         $io->hr();
@@ -305,7 +305,7 @@ class SearchDocsCommand extends Command
      * @param array<array<string, mixed>> $results Search results
      * @param \Cake\Console\ConsoleIo $io Console I/O
      */
-    private function showAllSnippets(array $results, ConsoleIo $io): void
+    private function showAllSnippets(array $results, ConsoleIo $io)
     {
         $io->out('');
         $io->hr();
@@ -346,7 +346,7 @@ class SearchDocsCommand extends Command
      * @param int $index Result index
      * @param \Cake\Console\ConsoleIo $io Console I/O
      */
-    private function viewResultDetail(array $results, int $index, ConsoleIo $io): void
+    private function viewResultDetail(array $results, int $index, ConsoleIo $io)
     {
         $result = $results[$index];
         $totalResults = count($results);
@@ -453,7 +453,7 @@ class SearchDocsCommand extends Command
      * @param array<string, mixed> $result Search result
      * @param \Cake\Console\ConsoleIo $io Console I/O
      */
-    private function viewFullDocument(array $result, ConsoleIo $io): void
+    private function viewFullDocument(array $result, ConsoleIo $io)
     {
         $documentId = $result['id'] ?? null;
 

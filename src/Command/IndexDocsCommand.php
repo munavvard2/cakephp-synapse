@@ -38,7 +38,7 @@ class IndexDocsCommand extends Command
      *
      * @param \Cake\Console\ConsoleOptionParser $parser Option parser
      */
-    protected function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
+    protected function buildOptionParser(ConsoleOptionParser $parser)
     {
         $parser
             ->setDescription('Index documentation for full-text search')
@@ -87,7 +87,7 @@ class IndexDocsCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int|null Exit code
      */
-    public function execute(Arguments $args, ConsoleIo $io): ?int
+    public function execute(Arguments $args, ConsoleIo $io)
     {
         $service = new DocumentSearchService();
         $destroy = (bool)$args->getOption('destroy');
@@ -177,7 +177,7 @@ class IndexDocsCommand extends Command
      * @param \Synapse\Documentation\DocumentSearchService $service Search service
      * @param \Cake\Console\ConsoleIo $io Console I/O
      */
-    private function displayStatistics(DocumentSearchService $service, ConsoleIo $io): void
+    private function displayStatistics(DocumentSearchService $service, ConsoleIo $io)
     {
         $io->out('<info>Index Statistics</info>');
 
@@ -203,7 +203,7 @@ class IndexDocsCommand extends Command
      * @param \Cake\Console\ConsoleIo $io Console I/O
      * @return int Exit code
      */
-    private function handleDestroy(DocumentSearchService $service, Arguments $args, ConsoleIo $io): int
+    private function handleDestroy(DocumentSearchService $service, Arguments $args, ConsoleIo $io)
     {
         $io->out('<warning>Destroy Search Index</warning>');
         $io->hr();

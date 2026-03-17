@@ -12,3 +12,4 @@
 .rules
 /coverage*
 /plan
+/vendor_5.x/
