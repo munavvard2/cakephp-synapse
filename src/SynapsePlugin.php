@@ -30,12 +30,12 @@ class SynapsePlugin extends BasePlugin
     /**
      * Plugin name
      */
-    protected ?string $name = 'Synapse';
+    protected $name = 'Synapse';
 
     /**
      * Stores the CommandCollection captured from Console.buildCommands event
      */
-    protected static ?CommandCollection $commandCollection = null;
+    protected static $commandCollection = null;
 
     /**
      * Reset the static CommandCollection (for testing purposes)
